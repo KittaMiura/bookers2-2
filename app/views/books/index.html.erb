@@ -1,6 +1,6 @@
 <% @books.each do |book| %>
 <div>
-  <p>Face：<%= image_tag 'eriri.png' %></p>
+  <p>Face：<%= image_tag book.user.get_profile_image(100,100) %></p>
   <p>Title：
   <%= link_to book do %>
     <%= book.title %>
