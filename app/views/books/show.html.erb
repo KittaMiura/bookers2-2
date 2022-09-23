@@ -1,0 +1,10 @@
+<div>
+  <p>Title：<%= @book.title %></p>
+  <p>Opinion：<%= @book.opinion %></p>
+  <p>Face：<%= image_tag 'eriri.png' %></p>
+  <p>User：<%= @book.user.name %></p>
+  <p>Date：<%= @book.created_at.strftime('%Y/%m/%d') %></p>
+  <% if @book.user == current_user %>
+    <%= link_to "削除", book_path(@book), method: :delete %>
+  <% end %>
+</div>
